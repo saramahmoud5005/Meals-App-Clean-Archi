@@ -42,4 +42,13 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(project(path = ":domain"))
+
+    //Retrofit
+    implementation ("com.squareup.retrofit2:retrofit:2.6.0")
+    implementation ("com.google.code.gson:gson:2.8.5")
+    implementation ("com.squareup.retrofit2:converter-gson:2.5.0")
+    implementation ("com.squareup.okhttp3:logging-interceptor:3.12.0")
+
+//Coroutines
+    implementation ("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5")
 }
