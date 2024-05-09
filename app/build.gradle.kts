@@ -35,6 +35,9 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
@@ -50,7 +53,7 @@ dependencies {
 
     // Dagger Hilt
     implementation("com.google.dagger:hilt-android:2.44")
-    kapt("com.google.dagger:hilt-android-compiler:2.44")
+    annotationProcessor("com.google.dagger:hilt-android-compiler:2.44")
 
     // Retrofit & OkHttp
     implementation ("com.squareup.retrofit2:retrofit:2.5.0")
@@ -64,6 +67,12 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
     // Lifecycles only (without ViewModel or LiveData)
     implementation("androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version")
+
+    implementation ("androidx.activity:activity-ktx:1.9.0")
+//    implementation ("androidx.fragment:fragment-ktx:2.3.5")
+
+    // Glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 
     implementation(project(path = ":domain"))
     implementation(project(path = ":data"))
